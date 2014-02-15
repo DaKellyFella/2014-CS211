@@ -1,5 +1,9 @@
 package lab1.question3;
-
+/*
+ * Example test cases:
+ * {1, 2, 1, 4, 1} -> {1, 2, 4}
+ * The rest you can think of yourself!
+ */
 //Remove all duplicates from an array.
 public class Question3
 {

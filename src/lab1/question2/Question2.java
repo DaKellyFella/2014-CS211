@@ -1,7 +1,14 @@
 package lab1.question2;
 
 import java.util.Random;
-
+/*
+ * Example test cases:
+ * 2,1 -> 0.798934
+ * 2,2 -> 0.500816
+ * 10,5 -> 0.934594
+ * 10,9 -> 0.606436
+ * 100,99 -> 0.530298
+ */
 public class Question2
 {
 	private static final int SomeBigNumber = 500000;

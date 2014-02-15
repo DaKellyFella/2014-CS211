@@ -1,5 +1,12 @@
 package lab1.question1;
-
+/*
+ * Example test cases:
+ * 5 -> 0.92291665
+ * 8 -> 0.76111114
+ * 11 -> 0.51875
+ * 14 -> 0.2701389
+ * 17 -> 0.099305555
+ */
 public class Question1
 {
 	// Sum of hours and minutes and percentage above/below that.
