@@ -13,10 +13,10 @@ import java.io.RandomAccessFile;
  */
 public class CompressionPackage 
 {
-	public BitMap compressedString;
+	public BitVector compressedString;
 	public Tree huffmanTree;
 	public CompressionPackage(){}
-	public CompressionPackage(BitMap inCompressedString, Tree inHuffmanTree)
+	public CompressionPackage(BitVector inCompressedString, Tree inHuffmanTree)
 	{
 		this.compressedString = inCompressedString;
 		this.huffmanTree = inHuffmanTree;
@@ -61,7 +61,7 @@ public class CompressionPackage
 			byte[] fileData = new byte[arrayLength];
 			binaryFile.readFully(fileData, 0, arrayLength);
 			binaryFile.close();
-			retrivedPackage.compressedString = BitMap.fromByteArray(fileData, bitSize);
+			retrivedPackage.compressedString = BitVector.fromByteArray(fileData, bitSize);
 		}catch (IOException | ClassNotFoundException e)
 		{
 			e.printStackTrace();

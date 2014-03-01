@@ -5,22 +5,22 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 /*
- * Ported my C++ bitmap to Java.
+ * Ported my C++ BitVector to Java.
  * Most significant bit is now the "first bit".
  */
 
-public class BitMap
+public class BitVector
 {
 	private int numBytes;
 	private long numBits;
 	private byte[] array;
-	public BitMap()
+	public BitVector()
 	{
 		numBits = 8;
 		numBytes = 1;
 		array = new byte[numBytes];
 	}
-	public BitMap(int inSize)
+	public BitVector(int inSize)
 	{
 		numBits = inSize;
 		numBytes = inSize / 8;
@@ -73,7 +73,7 @@ public class BitMap
 			e.printStackTrace();
 		}
 	}
-	public static BitMap fromFile(File inFile)
+	public static BitVector fromFile(File inFile)
 	{
 		try{
 			RandomAccessFile binaryFile = new RandomAccessFile(inFile, "r");
@@ -96,12 +96,12 @@ public class BitMap
 		}
 		return null;
 	}
-	public static BitMap fromByteArray(byte[] inArray, long inNumBits)
+	public static BitVector fromByteArray(byte[] inArray, long inNumBits)
 	{
-		BitMap myBitMap = new BitMap();
-		myBitMap.array = inArray;
-		myBitMap.numBytes = inArray.length;
-		myBitMap.numBits = inNumBits;
-		return myBitMap;
+		BitVector myBitVector = new BitVector();
+		myBitVector.array = inArray;
+		myBitVector.numBytes = inArray.length;
+		myBitVector.numBits = inNumBits;
+		return myBitVector;
 	}
 }

@@ -70,7 +70,7 @@ public class Huffman{
     	printStars();
     	System.out.println("Setting bits now");
     	long setBitsStart = System.currentTimeMillis();
-    	BitMap compressedString = new BitMap(bitsNeeded);
+    	BitVector compressedString = new BitVector(bitsNeeded);
     	
     	int currentBit = 0;
     	for(int i = 0; i < sentence.length(); ++i)
@@ -86,7 +86,7 @@ public class Huffman{
     
     public static StringBuilder decodeFromBytes(CompressionPackage inPackage)
     {
-    	BitMap compressedString = inPackage.compressedString;
+    	BitVector compressedString = inPackage.compressedString;
     	Tree huffmanTree = inPackage.huffmanTree;
     	StringBuilder unCompressedString = new StringBuilder();
     	for(int i = 0; i < compressedString.getNumBits(); ++i)
