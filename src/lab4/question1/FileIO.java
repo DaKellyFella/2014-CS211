@@ -11,10 +11,8 @@ public class FileIO{
     try {
       input = new BufferedReader( new FileReader(aFile) );
       String line = null; 
-      int i = 0;
       while (( line = input.readLine()) != null){
         contents.append(line);
-        i++;
         contents.append(System.getProperty("line.separator"));
       }
     }
