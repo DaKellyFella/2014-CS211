@@ -1,4 +1,4 @@
-package lab3.question1.utils;
+package lab3.utils;
 
 import java.io.Serializable;
 

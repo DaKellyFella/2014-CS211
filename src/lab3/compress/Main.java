@@ -1,8 +1,8 @@
-package lab3.question1.compress;
+package lab3.compress;
 
 import java.io.File;
 
-import lab3.question1.utils.Huffman;
+import lab3.utils.Huffman;
 
 public class Main
 {
